@@ -1,12 +1,13 @@
 
 import { useMealsContext } from '../hooks/useMealsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
-const apiURL = process.env.REACT_APP_API_URL
+
 
 
 
 //Date Format
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+const apiURL = process.env.REACT_APP_API_URL
 
 
 const MealDetails = ({ meal }) => {
