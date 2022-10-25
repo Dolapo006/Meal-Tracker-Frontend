@@ -1,6 +1,7 @@
-const apiURL = process.env.REACT_APP_API_URL
+
 import { useMealsContext } from '../hooks/useMealsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
+const apiURL = process.env.REACT_APP_API_URL
 
 
 

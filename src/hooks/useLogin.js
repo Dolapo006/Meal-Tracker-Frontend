@@ -1,6 +1,7 @@
-const apiURL = process.env.REACT_APP_API_URL
+
 import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
+const apiURL = process.env.REACT_APP_API_URL
 
 export const useLogin = () => {
   const [error, setError] = useState(null)
