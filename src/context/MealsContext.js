@@ -2,18 +2,18 @@ import { createContext, useReducer} from "react";
 
 export const MealsContext = createContext()
 
-export const mealsReducer = (state, action) => {
+export const mealsReducer = async (state, action) => {
     switch(action.type) {
         case 'SET_MEALS':
-            return {
+            return await {
                 meals: action.payload
             }
         case 'CREATE_MEAL':
-            return {
+            return await {
                 meals: [action.payload, ...state.meals]
             }
         case 'DELETE_MEAL':
-            return {
+            return await {
                 meals: state.meals.filter((m) => m._id !== action.payload._id)
             }
         default: 
