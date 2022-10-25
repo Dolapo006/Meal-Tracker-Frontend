@@ -1,3 +1,4 @@
+const apiURL = process.env.REACT_APP_API_URL
 import { useState } from "react"
 import { useMealsContext } from "../hooks/useMealsContext"
 import { useAuthContext } from '../hooks/useAuthContext'
@@ -27,7 +28,7 @@ const MealForm = () => {
 
         const meal = {title, calories, serving}
 
-        const response = await fetch('/api/meals', {
+        const response = await fetch(apiURL + '/api/meals', {
             method: 'POST',
             body: JSON.stringify(meal),
             headers: {

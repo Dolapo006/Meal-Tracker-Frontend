@@ -1,3 +1,4 @@
+const apiURL = process.env.REACT_APP_API_URL
 import { useMealsContext } from '../hooks/useMealsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 
@@ -17,7 +18,7 @@ const MealDetails = ({ meal }) => {
             return
         }
 
-        const response = await fetch('/api/meals/' + meal._id, {
+        const response = await fetch(apiURL + '/api/meals/' + meal._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
